@@ -7,10 +7,10 @@
  * @version		1.0
  * @filesource 	./mithra62/tests/ErrorsTest.php
  */
-namespace mithra62\tests\Traits\MySQL;
+namespace JaegerApp\tests;
 
-use mithra62\Traits\MySQL\Mycnf;
-use mithra62\tests\TestFixture;
+use JaegerApp\Traits\MySQL\Mycnf;
+use JaegerApp\tests\TestFixture;
 
 /**
  * Mock for testing the Mycnf Trait
@@ -41,7 +41,7 @@ class _my
  * @package mithra62\Tests
  * @author Eric Lamb <eric@mithra62.com>
  */
-class MycnfTest extends TestFixture
+class MycnfTest extends \PHPUnit_Framework_TestCase
 {
 
     protected $test_cnf_data = array(
@@ -68,4 +68,24 @@ class MycnfTest extends TestFixture
         $my = new _my();
         $this->assertTrue($my->checkRemoveMyCnf($path));
     }
+    
+    /**
+     * The Databaes Test Credentiasl
+     *
+     * @return array
+     */
+    protected function getDbCreds()
+    {
+        return include 'data/db.config.php';
+    }
+    
+    /**
+     * The full path to the data directory
+     *
+     * @return string
+     */
+    protected function dataPath()
+    {
+        return realpath(dirname(__FILE__) . DIRECTORY_SEPARATOR.'data');
+    }    
 }
