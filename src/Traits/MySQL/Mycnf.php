@@ -1,21 +1,20 @@
 <?php
 /**
- * mithra62 - Encoding
+ * Jaeger
  *
- * @author		Eric Lamb <eric@mithra62.com>
- * @copyright	Copyright (c) 2015, mithra62, Eric Lamb.
- * @link		http://mithra62.com/
+ * @copyright	Copyright (c) 2015-2016, mithra62
+ * @link		http://jaeger-app.com
  * @version		1.0
- * @filesource 	./mithra62/Traits/MySQL/Mycnf.php
+ * @filesource 	./Traits/MySQL/Mycnf.php
  */
 namespace JaegerApp\Traits\MySQL;
 
 /**
- * mithra62 - MySQL my.cnf Trait
+ * Jaeger - MySQL my.cnf Trait
  *
  * Allows for creating my.cnf files
  *
- * @package MySQL
+ * @package Db
  * @author Eric Lamb <eric@mithra62.com>
  */
 trait Mycnf
